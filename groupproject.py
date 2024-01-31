@@ -67,15 +67,41 @@ plt.ylabel('Density')
 plt.show()
 
 
+#dropping the URL as it isn't useful information
+column_to_drop = 'url'
+new_all_data = new_all_data.drop(columns=[column_to_drop])
+
+
+new_all_data.shares.describe()
+
+explan_vars = new_all_data.drop(columns=['shares'])
+
+target = new_all_data['shares']
+
+explan_var_corr = -0.009
+
+#iterating correlations to shares
+
+for column in explan_vars.columns:
+  correlation = target.corr(explan_vars[column])
+  
+  try:
+    if correlation > explan_var_corr:
+      print(f"Correlation between 'shares' and '{column}': {correlation}")
+  except Exception as e:
+    pass
+
+    
 
 #column_list = df.columns.tolist()
 #print(column_list)
 
 
-#df.corr()
 
-#plt.figure(figsize=(16, 6))
-#corr_heat = sns.heatmap(train.corr(numeric_only='True')[['loss']].sort_values(by='loss', ascending = False),vmin=-1, vmax=1, annot=True, cmap='BrBG');
 
-#corr_heat.set_title('Continuous Features Correlating with Loss variable', fontdict={'fontsize':12}, pad=12)
+
+#plt.figure(figsize=(30, 15))
+#corr_heat = sns.heatmap(new_all_data.corr(numeric_only='True')[['shares']].sort_values(by='shares', ascending = False), cmap='BrBG');
+
+#corr_heat.set_title('Continuous Features Correlating with Share variable', fontdict={'fontsize':12}, pad=12)
 #warnings.filterwarnings("ignore")
