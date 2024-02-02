@@ -132,3 +132,46 @@ for column in explan_vars.columns:
 
 #corr_heat.set_title('Continuous Features Correlating with Share variable', fontdict={'fontsize':12}, pad=12)
 #warnings.filterwarnings("ignore")
+
+# Create a 'top_data_channel' column based on the data_channel columns
+df['top_data_channel'] = df[['data_channel_is_lifestyle', 'data_channel_is_entertainment',
+                             'data_channel_is_bus', 'data_channel_is_socmed',
+                             'data_channel_is_tech', 'data_channel_is_world']].idxmax(axis=1)
+
+# Print the unique values in the 'top_data_channel' column
+unique_top_data_channels = df['top_data_channel'].unique()
+print(f"Unique values in 'top_data_channel': {unique_top_data_channels}\n")
+
+# Define a function to extract the last word from a string
+def extract_last_word(channel):
+    words = channel.split('_')
+    return words[-1]
+
+# Apply the function to the 'top_data_channel' column and create a new 'top_data_channel_last_word' column
+df['top_data_channel_last_word'] = df['top_data_channel'].apply(extract_last_word)
+
+# Print the unique values in the 'top_data_channel_last_word' column
+unique_last_words = df['top_data_channel_last_word'].unique()
+print(f"Unique last words in 'top_data_channel_last_word': {unique_last_words}\n")
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Box plot of 'shares' vs. 'top_data_channel_last_word'
+plt.figure(figsize=(16, 8))
+ax = sns.boxplot(x='top_data_channel_last_word', y='shares', data=df, palette='viridis')
+plt.title('Correlation between Top Data Channel and Number of Shares')
+plt.xlabel('Top Data Channel (Last Word)')
+plt.ylabel('Number of Shares (scaled to 10,000)')
+
+# Scale y-axis ticks and labels to 10,000
+plt.yticks(ticks=[i*10000 for i in range(6)], labels=[f'{i*10000:.0f}' for i in range(6)])
+
+# Create a secondary y-axis with the same scale
+secondary_ax = ax.secondary_yaxis('right')
+secondary_ax.set_ylabel('Number of Shares')
+
+plt.show()
+
+
+
