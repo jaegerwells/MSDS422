@@ -173,5 +173,7 @@ secondary_ax.set_ylabel('Number of Shares')
 
 plt.show()
 
+# Drop non-predictive features
+df = df.drop(columns=['url', 'timedelta'])
 
 
