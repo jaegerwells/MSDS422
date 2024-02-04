@@ -170,15 +170,20 @@ for column in num_cols:
 
 #scaling the dataset df2_num contains the numerical features while df2_cat contains the categorical features.
 
-df2_num=df.drop(["monday","tuesday","wednesday","thursday",
-                  "friday","saturday","sunday","is_weekend",                  
-                  "lifestyle","entertainment","bus",
-                  "socmed","tech","world"],axis=1)
+df = df.drop(columns=['url', 'timedelta'])
 
-df2_cat=df[["monday","tuesday","wednesday","thursday",
-             "friday","saturday","sunday","is_weekend",            
-             "lifestyle","entertainment","bus",
-                  "socmed","tech","world"]]
+df2_num=df.drop(["weekday_is_monday","weekday_is_tuesday","weekday_is_wednesday","weekday_is_thursday",
+                  "weekday_is_friday","weekday_is_saturday","weekday_is_sunday","is_weekend",
+                  "data_channel_is_lifestyle","data_channel_is_entertainment","data_channel_is_bus",
+                  "data_channel_is_socmed","data_channel_is_tech","data_channel_is_world"],axis=1)
+
+# Create df_num that contains numerical columns
+df2_num = df2_num.drop('shares',axis=1)
+
+df2_cat=df[["weekday_is_monday","weekday_is_tuesday","weekday_is_wednesday","weekday_is_thursday",
+             "weekday_is_friday","weekday_is_saturday","weekday_is_sunday","is_weekend",
+             "data_channel_is_lifestyle","data_channel_is_entertainment","data_channel_is_bus",
+                  "data_channel_is_socmed","data_channel_is_tech","data_channel_is_world"]]
 
 #drop the target variable from df2_num
 
@@ -188,23 +193,23 @@ df2_num.columns
 
 # Finding negative values
 
-#negcols=df2_num.columns[(df2_num<=0).any()]
-#negcols
+negcols=df2_num.columns[(df2_num<=0).any()]
+negcols
 
 #converting negative values to positive values
 
-#for i in negcols:
- #   m=df2_num[i].min()
-  #  name=i +'_new'
-   # df2_num[name]=((df2_num[i]+1)-m)
+for i in negcols:
+   m=df2_num[i].min()
+   name=i +'_new'
+   df2_num[name]=((df2_num[i]+1)-m)
 
-#df2_num.columns
+df2_num.columns
 
-#for i in negcols:
- #   df2_num.drop(i,axis=1,inplace=True)
+for i in negcols:
+   df2_num.drop(i,axis=1,inplace=True)
 
-#negcols=df2_num.columns[(df2_num<=0).any()]
-#negcols
+negcols=df2_num.columns[(df2_num<=0).any()]
+negcols
 
 pt=preprocessing.PowerTransformer(method='yeo-johnson',standardize=False)
 df2_num_add=pt.fit_transform(df2_num)
