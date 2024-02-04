@@ -46,9 +46,7 @@ plt.show()
 
 df.columns=df.columns.str.replace(" ","")
 
-column_to_drop = 'url'
-df = df.drop(columns=[column_to_drop])
-
+df = df.drop('url',axis=1)
 
 cor=df.corr()
 #ns.heatmap(cor)
