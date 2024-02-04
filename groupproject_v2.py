@@ -81,7 +81,7 @@ ax = sns.scatterplot(y='shares', x='n_tokens_content', data=df)
 
 a,b = df['shares'].mean(),df['shares'].median()
 
-weekday = df.columns.values[26:33]
+weekday = df.columns.values[27:34]
 weekday
 
 #Visual of popular vs. unpopular news across the week
@@ -105,7 +105,7 @@ plt.legend(loc = 'upper right')
 plt.tight_layout()
 plt.show()
 
-channel=df.columns[9:15]
+channel=df.columns[11:16]
 channel
 
 #count of popular vs. unpopular news over different channels
@@ -140,8 +140,8 @@ df.shares.hist(bins=50)
 #creating subplots for outliers
 num_cols = df.select_dtypes(['int64','float64']).columns
 num_plots = len(num_cols)
-num_rows = math.ceil(num_plots / 13)  # You can adjust the number of columns as per your preference
-num_cols_subplot = 5
+num_rows = math.ceil(num_plots / 6)  
+num_cols_subplot = 6
 
 
 fig, axes = plt.subplots(num_rows, num_cols_subplot, figsize=(15, 5 * num_rows))
