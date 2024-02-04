@@ -1,6 +1,8 @@
 # MSDS422 Group Project
 this is our Github for MSDS422 project for Winter 2024 quarter
 
+For Python code, please see **groupproject_v2.py** for all code and visuals
+
 #### MSDS 422 Winter 2024
 #### Conor Walsh, Albert Lee, Yueh-Chang Kuo, Jaeger Wells
 
