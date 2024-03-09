@@ -33,10 +33,15 @@ https://archive.ics.uci.edu/dataset/332/online+news+popularity
 
 In this dataset, there are 62 total columns with roughly 39,650 rows of data. the majority of the variables within this dataset are numerical, with specific variables such as num_non_stop_words and avg_positive_polarity, being hallmarks of natural language processing models (NLP).
 
-Throughout our EDA, we’re able to determine the count of popular vs. unpopular news over different days of the week. News is more popular Monday, Thursday, Friday, Saturday, and Sunday. Whereas the news is more unpopular on Tuesday and Wednesday.
+Throughout our EDA, we’re able to determine the count of popular vs. unpopular news over different days of the week. News is more popular Monday, Thursday, Friday, Saturday, and Sunday. Whereas the news is more unpopular on Tuesday and Wednesday. 
+
+When thinking about news sentiment, it appears that there is a fairly normal distribution in the number of shares of news articles. While not skewed overly negative, there is a distribution that has the majority of data points falling within -0.2 and 0.4 sentiment, which has a longer tail on the positive sentiment spectrum. While the sentiment shows slightly more positive, looking at the distribuition of articles by subjectivity shows that the distribution of articles are disributed in a range that is fairly subjective. Taking these datapoints into consideration, it could be thought of that highly subjective, fairly positive articles are more likely to be viral.
+
 
 
  We also wanted to initially look at the count of popular vs. unpopular over different channels on Mashable. Lifestyle, Business, Social Media, and Tech are more popular vs. Entertainment and World are more unpopular.
+
+ 
 
 ## Feature Engineering
 
