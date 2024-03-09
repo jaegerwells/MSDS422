@@ -2,7 +2,7 @@
 
 this is our Github for MSDS422 project for Winter 2024 quarter
 
-For Python code, please see **groupproject_v2.py** for all code and visuals
+For Python code, please see **group_project_v3.ipynb** for all code and visuals
 
 #### MSDS 422 Winter 2024
 
@@ -10,7 +10,7 @@ For Python code, please see **groupproject_v2.py** for all code and visuals
 
 ## Executive Summary
 
-Online news and social media have become a dominant force in our society today. "Going viral" or shareability is how people learn about world events. While news feels like it is unbalanced and incredible negative most of the time, there is a need to explore what are the attributes of articles that drive shareability. By utilizing data from over 2 years from the website Mashable, we will look to understand what are the characteristics of a news article going viral.
+Online news and social media have become a dominant force in our society today. "Going viral" or shareability is how people learn about world events. While news feels like it is unbalanced and incredible negative most of the time, there is a need to explore what are the attributes of articles that drive shareability. By utilizing data from over 2 years from the website Mashable, we will look to understand what are the characteristics of a news article going viral. 
 
 ## Problem Statement / Research Objectives
 
@@ -69,7 +69,7 @@ We evaluate each of these models in afew different ways. The first look at a con
 
 While we have not fully deployed the models in question, but we would follow industrty standard approaches to machine learning model deployment. This includes first choosing the deployment environment best suited to the needs of the project and other requirements. This could be utilizing environments such as AWS, Azure, or Google Cloud.
 
-Next we would have to package the model and it's dependences into a container and then deploy the container. Containerization methods allow for a model, runtime environment, and it's dependencies are packaged together to ensure reproducibility. From there we would need to set up monitoring to ensure there aren't any issues and maintanence (Logunva 2023).
+Next we would have to package the model and it's dependencies into a container and then deploy the container. Containerization methods allow for a model, runtime environment, and it's dependencies are packaged together to ensure reproducibility. From there we would need to set up monitoring to ensure there aren't any issues and maintanence (Logunva 2023).
 
 # Findings and Conclusions
 
@@ -94,3 +94,5 @@ https://www.kaggle.com/datasets/thedevastator/popular-news-articles-popularity-o
 Logunva, I. (2023). ML model deployment: Challenges, solutions & best practices. Retrieved from https://serokell.io/blog/ml-model-deployment
 
 Hvitfeldt, E. (2024). Numeric Transformation using Yeo-Johnson Transformation. In Feature Engineering A-Z. Retrieved from https://feaz-book.com/numeric-yeojohnson
+
+Johnson, A., & Weinberger, D. (n.d.). Predicting News Sharing on Social Media. Stanford CS229 Project Reports. Retrieved from https://cs229.stanford.edu/proj2016/report/JohnsonWeinberger-PredictingNewsSharing-report.pdf
