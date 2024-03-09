@@ -80,6 +80,20 @@ TBD
 
 # Lessons Learned and Recommendations
 
+## Lessons Learned
+
+## Recommendations
+
+One key recommendation for further analysis would be to utilize this analysis as a jumping off point to incorporate a multi label classification analysis, so better understand what goes viral for each of the channel types. This could help Mashable fine tune their own sharing algorithms to continue to supercharge engagement.
+
+### Potential Third Party Datasets
+
+While Mashable provides a robust dataset to utilize for this analysis, it is just one source of news that we are looking at. In order to expand this analysis into something of a larger scale, we would need to leverage third party datasets to get a more holistic view of digital news consumption and virality. One of these datasets can be found from Meneame, which is a Spanish digital news source. This data set is available on Kaggle:
+
+https://www.kaggle.com/datasets/thedevastator/popular-news-articles-popularity-on-meneame 
+
+
+
 
 # References
 
