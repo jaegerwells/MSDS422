@@ -35,6 +35,7 @@ In this dataset, there are 62 total columns with roughly 39,650 rows of data. th
 
 Throughout our EDA, we’re able to determine the count of popular vs. unpopular news over different days of the week. News is more popular Monday, Thursday, Friday, Saturday, and Sunday. Whereas the news is more unpopular on Tuesday and Wednesday.
 
+
  We also wanted to initially look at the count of popular vs. unpopular over different channels on Mashable. Lifestyle, Business, Social Media, and Tech are more popular vs. Entertainment and World are more unpopular.
 
 ## Feature Engineering
