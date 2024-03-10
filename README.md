@@ -124,4 +124,4 @@ Johnson, A., & Weinberger, D. (n.d.). Predicting News Sharing on Social Media. S
 
 K. Fernandes, P. Vinagre and P. Cortez. A Proactive Intelligent Decision Support System for Predicting the Popularity of Online News. Proceedings of the 17th EPIA 2015 - Portuguese Conference on Artificial Intelligence, September, Coimbra, Portugal. Retrieved from https://archive.ics.uci.edu/dataset/332/online+news+popularity 
 
-Jain, S. (207). Introduction to Multi-label Classification. Analytics Vidhya. https://www.analyticsvidhya.com/blog/2017/08/introduction-to-multi-label-classification/
+Jain, S. (2017). Introduction to Multi-label Classification. Analytics Vidhya. https://www.analyticsvidhya.com/blog/2017/08/introduction-to-multi-label-classification/
