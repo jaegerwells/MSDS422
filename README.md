@@ -63,7 +63,7 @@ In light of understanding the problem statement of determining the characteristi
 * Naive Bayes Gaussian Classifier
 * Logistic Classification
 * Random Forest Classifier
-* KMeans Nearest Neighbor
+* KNeighborsClassifier
 ```
 
 We evaluate each of these models in afew different ways. The first look at a confusion matrix to look at accuracy, such as the instances of True Positives/True Negatives and False Positives/False Negatives. We also are able to compare each type of model by producing ROC/AUC curves.
