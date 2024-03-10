@@ -2,7 +2,9 @@
 
 this is our Github for MSDS422 project for Winter 2024 quarter
 
-For Python code, please see **group_project_v3.ipynb** for all code and visuals
+For Python code, please see **group_project_v3.ipynb** for all code and visuals:
+
+https://github.com/jaegerwells/MSDS422/blob/76123d38dff0c923e96c79a8ae83502a91eccd5e/group_project_v3.ipynb 
 
 #### MSDS 422 Winter 2024
 
