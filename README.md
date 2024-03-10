@@ -6,9 +6,9 @@ For Python code, please see **group_project_v3.ipynb** for all code and visuals:
 
 https://github.com/jaegerwells/MSDS422/blob/76123d38dff0c923e96c79a8ae83502a91eccd5e/group_project_v3.ipynb 
 
-#### MSDS 422 Winter 2024
+##### MSDS 422 Winter 2024
 
-#### Conor Walsh, Albert Lee, Yueh-Chang Kuo, Jaeger Wells
+##### Conor Walsh, Albert Lee, Yueh-Chang Kuo, Jaeger Wells
 
 ## Executive Summary
 
@@ -16,7 +16,7 @@ Online news and social media have become a dominant force in our society today. 
 
 ## Problem Statement / Research Objectives
 
-Our problem statement is simple; What are the characteristics that make news go viral? We will look to understand if subjectivity, overall polarity, channel news is being displayed, and type of file format for news impacts the total number of shares on Mashable. Ultimately, we are viewing this analysis as a binary classification problem.
+Our problem statement is simple; What are the characteristics that make news go viral? We will look to understand if subjectivity, overall polarity, channel news is being displayed, and type of file format for news impacts the total number of shares on Mashable. Ultimately, we are view this analysis as a binary classification problem.
 
 ## Dataset Citation
 
@@ -38,8 +38,6 @@ In this dataset, there are 62 total columns with roughly 39,650 rows of data. th
 Throughout our EDA, we’re able to determine the count of popular vs. unpopular news over different days of the week. News is more popular Monday, Thursday, Friday, Saturday, and Sunday. Whereas the news is more unpopular on Tuesday and Wednesday. 
 
 When thinking about news sentiment, it appears that there is a fairly normal distribution in the number of shares of news articles. While not skewed overly negative, there is a distribution that has the majority of data points falling within -0.2 and 0.4 sentiment, which has a longer tail on the positive sentiment spectrum. While the sentiment shows slightly more positive, looking at the distribuition of articles by subjectivity shows that the distribution of articles are disributed in a range that is fairly subjective. Taking these datapoints into consideration, it could be thought of that highly subjective, fairly positive articles are more likely to be viral.
-
-
 
  We also wanted to initially look at the count of popular vs. unpopular over different channels on Mashable. Lifestyle, Business, Social Media, and Tech are more popular vs. Entertainment and World are more unpopular.
 
@@ -64,13 +62,13 @@ the primary hardware that we have utilized have been our respective CPU processo
 In light of understanding the problem statement of determining the characteristics of viral news, we aim to understand this in a classification analysis as opposed to a regression analysis. Since ultimately we are interested in understanding the attributes of viral news, we selected the following model types to conduct our analysis:
 
 ```
-*Naive Bayes Gaussian Classifier
-*Logistic Classification
-*Random Forest
-*KMeans Nearest Neighbor
+* Naive Bayes Gaussian Classifier
+* Logistic Classification
+* Random Forest Classifier
+* KMeans Nearest Neighbor
 ```
 
-We evaluate each of these models in afew different ways. The first look at a confusion matrix of each type of model as well as producing ROC/AUC curves to understand accuracy.
+We evaluate each of these models in afew different ways. The first look at a confusion matrix to look at accuracy, such as the instances of True Positives/True Negatives and False Positives/False Negatives. We also are able to compare each type of model by producing ROC/AUC curves.
 
 ## Model deployment strategy
 
@@ -82,13 +80,23 @@ Next we would have to package the model and it's dependencies into a container a
 
 TBD
 
+
+
 # Lessons Learned and Recommendations
 
 ## Lessons Learned
 
+We have learned several key things in this analysis. First, we have found that a hypertuned RandomForest model is a feasible solution for predicting news virality. We have found that this is validated from other studies including Johnson & Weinberger (n.d.) and Fernandes et al (2015). All of the classification machine learning models utilized were able to achieve greater than 55% accuracy, and we believe that this could be improved upon with additional data sources from outside of Mashable.
+
+Second, we can limit the impact of outliers through feature engineering. By limiting outliers helps de-risk overfitting a model to training data and allows for higher performance of unseen data.
+
+
 ## Recommendations
 
-One key recommendation for further analysis would be to utilize this analysis as a jumping off point to incorporate a multi label classification analysis, so better understand what goes viral for each of the channel types. This could help Mashable fine tune their own sharing algorithms to continue to supercharge engagement.
+There are several recommendations as we think about deploying this analysis. First, explore training models on smaller percentages of datasets. Our analysis indicates <3% change in performance across all models when training with 10% and 100% of the dataset. This could also save on computation time; training excursions may be run on smaller percentages of the dataset to determine a baseline model feasibility. 
+
+
+Another recommendation for further analysis would be to utilize this analysis as a jumping off point to incorporate a multi label classification analysis, so better understand what goes viral for each of the channel types (Jain 2017). This could help Mashable fine tune their own sharing algorithms to continue to supercharge engagement.
 
 ### Potential Third Party Datasets
 
@@ -103,3 +111,7 @@ Logunva, I. (2023). ML model deployment: Challenges, solutions & best practices.
 Hvitfeldt, E. (2024). Numeric Transformation using Yeo-Johnson Transformation. In Feature Engineering A-Z. Retrieved from https://feaz-book.com/numeric-yeojohnson
 
 Johnson, A., & Weinberger, D. (n.d.). Predicting News Sharing on Social Media. Stanford CS229 Project Reports. Retrieved from https://cs229.stanford.edu/proj2016/report/JohnsonWeinberger-PredictingNewsSharing-report.pdf
+
+K. Fernandes, P. Vinagre and P. Cortez. A Proactive Intelligent Decision Support System for Predicting the Popularity of Online News. Proceedings of the 17th EPIA 2015 - Portuguese Conference on Artificial Intelligence, September, Coimbra, Portugal. Retrieved from https://archive.ics.uci.edu/dataset/332/online+news+popularity 
+
+Jain, S. (207). Introduction to Multi-label Classification. Analytics Vidhya. https://www.analyticsvidhya.com/blog/2017/08/introduction-to-multi-label-classification/
