@@ -80,13 +80,11 @@ Next we would have to package the model and it's dependencies into a container a
 
 # Findings and Conclusions
 
-Using Binary Classification to binarize the data into popular vs. unpopular news categories. The median threshold was 1,400 shares. From there we performed 4 models as discussed in slide 7. Using Accuracy as the performance metric, we were able to determine that the Random Forest model performed the best across all sample datasets. We then hyper tuned the model to increase the overall accuracy up to ~67%.
+Using Binary Classification to binarize the data into popular vs. unpopular news categories. The median threshold was 1,400 shares. From there we performed 4 models as discussed in slide 7. Using Accuracy as the performance metric, we were able to determine that the Random Forest model performed the best across all sample datasets. We then hyper tuned the model to increase the overall accuracy up to ~67%. We are able to show accuracy through confusion matrices. 
 
-While we were able to predict with ~67% accuracy there is room to continue to improve the models. The random forest model classification before hyper tuning was 66.39% and after hyper tuning increased to 66.99%. With a 67% accuracy, the business should consider using these models to drive increased shares. Surprisingly, our accuracy was also in line with the original authors in their paper - “A Proactive Intelligent Decision Support System for Predicting the Popularity of Online News”.
+While we were able to predict with ~67% accuracy there is room to continue to improve the models. The random forest model classification before hyper tuning was 66.39% and after hyper tuning increased to 66.99%. With a 67% accuracy, the business should consider using these models to drive increased shares. Surprisingly, our accuracy was also in line with the original authors in their paper - “A Proactive Intelligent Decision Support System for Predicting the Popularity of Online News”. The 67% accuracy highlights variability with predictions also depends on the dataset. The imbalance in the class distribution caused the model to be more biased towards popular articles. 
 
-The 67% accuracy highlights variability with predictions also depends on the dataset. The imbalance in the class distribution caused the model to be more biased towards popular articles.
-
-As we reflect, on our analysis, we could have included other variables such as word count or certain keywords and factor that into the performance of the models.
+As we reflect on our analysis, we could have included other variables such as word count or certain keywords and factor that into the performance of the models.  
  
 Another interesting data that we would have liked to seen from the dataset is around variables on the author, author experience, number of articles that authors have published, etc. One possibility is that certain authors may perform better than others.
 
@@ -97,10 +95,14 @@ We have learned several key things in this analysis. First, we have found that a
 
 Second, we can limit the impact of outliers through feature engineering. By limiting outliers helps de-risk overfitting a model to training data and allows for higher performance of unseen data.
 
+Finally, a because we had an imbalanced dataset, in the future we would try utilizing SMOTE techniques to normalize distribution via oversampling with synthetic data.
+
 
 ## Recommendations
 
-There are several recommendations as we think about deploying this analysis. First, explore training models on smaller percentages of datasets. Our analysis indicates <3% change in performance across all models when training with 10% and 100% of the dataset. This could also save on computation time; training excursions may be run on smaller percentages of the dataset to determine a baseline model feasibility. 
+There are several recommendations as we think about deploying this analysis.  Overall we should proceed with the immediate deployment of the hypertuned RandomForest Classifier model. We should also maintain the additional 3 models within our MLOps deployment pipeline to continue to reasses performance.
+
+First, explore training models on smaller percentages of datasets. Our analysis indicates <3% change in performance across all models when training with 10% and 100% of the dataset. This could also save on computation time; training excursions may be run on smaller percentages of the dataset to determine a baseline model feasibility. 
 
 Another recommendation for further analysis would be to utilize this analysis as a jumping off point to incorporate a multi label classification analysis, so better understand what goes viral for each of the channel types (Jain 2017). This could help Mashable fine tune their own sharing algorithms to continue to supercharge engagement.
 
