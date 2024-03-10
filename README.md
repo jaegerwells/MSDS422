@@ -84,7 +84,7 @@ The 67% accuracy highlights variability with predictions also depends on the dat
 
 As we reflect, on our analysis, we could have included other variables such as word count or certain keywords and factor that into the performance of the models.
  
-I think another interesting data that we would have liked to seen from the dataset is around variables on the author, author experience, number of articles that authors have published, etc. One possibility is that certain authors may perform better than others.
+Another interesting data that we would have liked to seen from the dataset is around variables on the author, author experience, number of articles that authors have published, etc. One possibility is that certain authors may perform better than others.
 
 # Lessons Learned and Recommendations
 ## Lessons Learned
