@@ -6,6 +6,10 @@ For Python code, please see **group_project_v3.ipynb** for all code and visuals:
 
 https://github.com/jaegerwells/MSDS422/blob/76123d38dff0c923e96c79a8ae83502a91eccd5e/group_project_v3.ipynb 
 
+
+Presentation can be found at the following link:
+https://github.com/jaegerwells/MSDS422/blob/45be660b84e69a58e83eb36d7a3da7242acf251b/MSDS422%20Group%20Project%20Presentation_Final.pdf
+
 ##### MSDS 422 Winter 2024
 
 ##### Conor Walsh, Albert Lee, Yueh-Chang Kuo, Jaeger Wells
