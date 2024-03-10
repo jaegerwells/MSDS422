@@ -110,6 +110,8 @@ https://www.kaggle.com/datasets/thedevastator/popular-news-articles-popularity-o
 
 Logunva, I. (2023). ML model deployment: Challenges, solutions & best practices. Retrieved from https://serokell.io/blog/ml-model-deployment
 
+Holtz, N. (2023). What is CRISP DM?. Data Science Process Alliance. Retrieved from https://www.datascience-pm.com/crisp-dm-2/ 
+
 Hvitfeldt, E. (2024). Numeric Transformation using Yeo-Johnson Transformation. In Feature Engineering A-Z. Retrieved from https://feaz-book.com/numeric-yeojohnson
 
 Johnson, A., & Weinberger, D. (n.d.). Predicting News Sharing on Social Media. Stanford CS229 Project Reports. Retrieved from https://cs229.stanford.edu/proj2016/report/JohnsonWeinberger-PredictingNewsSharing-report.pdf
